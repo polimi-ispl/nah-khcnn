@@ -22,17 +22,8 @@ The repo code is structured in the following folders:
 │   │   ├── ...
 │   │   └── ...
 │   └── example.py             # comment
-│       ├── diffuse
-│       └── soi
+│       ├── ...
+│       └── ...
 ├── ...
 ├── ...                     
 ```
-
-All the code file is given in Notebook files in order to provide complete explanations.
-Scripts are exportable in Python language and the installation of the following modules is required:
-* numpy
-* tensorflow
-* keras
-* sklearn.metrics
-* pickle
-* matplotlib.pyplot
