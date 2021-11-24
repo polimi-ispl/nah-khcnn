@@ -12,18 +12,29 @@ Results show that it attains a very good accuracy, with a gain in the NMSE of th
 ## Proposed architecture
 
 ![alt text](https://github.com/polimi-ispl/nah-khcnn/blob/main/images/KHCNN_architecture.png)
-Overall scheme of the proposed KHCNN model. The CNN architecture (yellow block) 􏰉􏰉predicts the real and imaginary parts of **_Ps_** and **_V_** from the input **_Ph_**. The two outputs are then 􏰉propagated with the KH model in order to obtain the estimate of **_Ph_**. A proper loss function is built on top of the velocity ground truth and the pressure at the hologram.
+Overall scheme of the proposed KHCNN model. The CNN architecture (yellow block) 􏰉􏰉predicts the real and imaginary parts of **_Ps_** and **_V_** (stacked in two channels) from the input **_Ph_**. The two outputs are then 􏰉propagated with the KH model in order to obtain the estimate of **_Ph_**. A proper loss function is built on top of the velocity ground truth and the pressure at the hologram.
 
 ## About the code
 The repo code is structured in the following folders:
 ```
-├── src                     # code
-│   ├── network_util           # comment
-│   │   ├── ...
-│   │   └── ...
-│   └── example.py             # comment
-│       ├── ...
-│       └── ...
-├── ...
-├── ...                     
+├── src                         # code
+│   ├── network_module              
+│   │   ├── cnn_models.py
+│   │   ├── kh_discretisation_tf.py
+│   │   └── khcnn_network.py
+│   ├── test_module              
+│   │   ├── plot_results.py
+│   │   └── test_kh_rec.py      # main
+│   └── utils
+│       ├── data_processing.py
+│       ├── metrics.py
+│       └── params.py           # initial parameters
+├── data
+│   ├── rectangular_plate              
+│   │   └── test_rec.mat        # examples of rectangular plate data
+│   └── weights
+│       ├── khcnn_rec_1024.h5   # trained weights for 1024 P_h input points
+│       └── khcnn_rec_64.h5     # trained weights for 64 P_h input points
+└── images
+    └── KHCNN_architecture.png                     
 ```
