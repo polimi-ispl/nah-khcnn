@@ -1,5 +1,5 @@
 # A Physics-Informed Neural Network Approach for Nearfield Acoustic Holography
-Repository of ["A Physics-Informed Neural Network Approach for Nearfield Acoustic Holography"](https://) 
+Repository of ["A Physics-Informed Neural Network Approach for Nearfield Acoustic Holography"](https://www.mdpi.com/1424-8220/21/23/7834) 
 
 M. Olivieri, M. Pezzoli, F. Antonacci, A. Sarti
 
